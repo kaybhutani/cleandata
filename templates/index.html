@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data extractor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+<table class="table" style="width:100%">
+
+  <tr>
+    <th scope="col">IEC.</th>
+    <th scope="col">IEC allotment date</th>
+    <th scope="col">Party name and address</th>
+     <th scope="col">F4</th>
+      <th scope="col">Phone No.</th>
+       <th scope="col">Email</th>
+        <th scope="col">Exporter type</th>
+         <th scope="col">BIN</th>
+          <th scope="col">Nature of concern</th>
+           <th scope="col">Directors</th>
+
+   
+  </tr>
+
+{%for data in data_list%}
+  <tr>
+    
+    {%for j in range(0,10)%}
+ 
+    <td>{{data[j]}}</td>
+{%endfor%}
+  </tr>
+{%endfor%}
+
+</table>
+
+
+
+
+</body>
+</html>
